@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden; /* Entfernt Scrollbars */
+}
+
+.container {
+  height: 100vh; /* Volle Höhe des Viewports */
+  width: 100vw; /* Volle Breite des Viewports */
+  position: relative;
+  overflow: hidden;
+}
+
+.container div {
+  position: absolute;
+  border-radius: 50%;
+  animation: gradient 6s infinite ease-in-out alternate;
+  filter: blur(50px); /* Weicher Farbverlauf */
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.5) translate(30px, 30px);
+  }
+}
+
+.container div:nth-child(1) {
+  height: 90%;
+  width: 80%;
+  background-color: #ff057c;
+  left: -20%;
+  top: -20%;
+  animation-delay: 0s;
+}
+
+.container div:nth-child(2) {
+  height: 80%;
+  width: 70%;
+  background-color: #800f86;
+  top: -25%;
+  right: -15%;
+  animation-delay: 1.5s;
+}
+
+.container div:nth-child(3) {
+  height: 75%;
+  width: 85%;
+  background-color: #1619b9;
+  bottom: -20%;
+  right: -20%;
+  animation-delay: 3s;
+}
+
+.container div:nth-child(4) {
+  height: 65%;
+  width: 75%;
+  background-color: #1ba8e9;
+  bottom: -25%;
+  left: -25%;
+  animation-delay: 4.5s;
+}
+
+.container::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(120px); /* Weicher Gesamt-Effekt */
+  pointer-events: none;
+}
