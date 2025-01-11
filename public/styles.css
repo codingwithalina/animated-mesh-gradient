@@ -55,7 +55,7 @@ html {
 .container div:nth-child(3) {
   height: 75%;
   width: 85%;
-  background-color: #1619b9;
+  background-color: #ff7700;
   bottom: -20%;
   right: -20%;
   animation-delay: 3s;
@@ -64,7 +64,7 @@ html {
 .container div:nth-child(4) {
   height: 65%;
   width: 75%;
-  background-color: #1ba8e9;
+  background-color: #7bf5d6;
   bottom: -25%;
   left: -25%;
   animation-delay: 4.5s;
